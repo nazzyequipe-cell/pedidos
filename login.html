@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login • NazzyPedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <div class="left-top">
+      <button id="menuBtn" class="icon-btn" aria-label="Abrir menu">≡</button>
+      <div class="brand">Nazzy<span class="brand-accent">Pedidos</span></div>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <div class="glass form-card">
+      <h2>Entrar</h2>
+      <form id="loginForm" autocomplete="off">
+        <label>Telefone
+          <input name="phone" required inputmode="tel" />
+        </label>
+        <label>Senha
+          <input name="password" type="password" required />
+        </label>
+
+        <div class="form-actions">
+          <a class="btn outline" href="index.html">Voltar</a>
+          <button type="submit" class="btn primary">Entrar</button>
+        </div>
+        <p class="form-note" id="loginMsg"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Sidebar visitor (same as index) -->
+  <aside id="sidebarLeft" class="sidebar left">
+    <button class="close-sidebar" aria-label="Fechar">✕</button>
+    <div class="sidebar-content">
+      <h3>Acesse uma conta para ir à próxima aba do site</h3>
+      <p><strong>Como criar uma conta + Fazer login</strong></p>
+      <div class="video-preview">
+        <a href="#" target="_blank" rel="noopener">Pré-visualizar vídeo (YouTube Shorts)</a>
+      </div>
+      <p><strong>Como fazer pedido + Receber pedido</strong></p>
+      <div class="video-preview">
+        <a href="#" target="_blank" rel="noopener">Pré-visualizar vídeo (YouTube Shorts)</a>
+      </div>
+
+      <h4>🍀 Nazzy Design</h4>
+      <p><a href="#" id="waLink3">Acesse aqui nossa comunidade!</a></p>
+      <p>© Nazzy Equipe</p>
+      <p>Nenhum administrador autoriza o uso das artes sem autorização.</p>
+      <p>Site criado pelo sublíder Rav</p>
+      <p>Qualquer dúvida sobre o uso do site, entre em contato conosco.</p>
+    </div>
+  </aside>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
