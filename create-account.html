@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Criar Conta • NazzyPedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <div class="left-top">
+      <button id="menuBtn" class="icon-btn" aria-label="Abrir menu">≡</button>
+      <div class="brand">Nazzy<span class="brand-accent">Pedidos</span></div>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <div class="glass form-card">
+      <h2>Criar Conta</h2>
+      <form id="createAccountForm" autocomplete="off">
+        <label>Apelido (obrigatório)
+          <input name="nickname" required />
+        </label>
+        <label>Telefone (obrigatório)
+          <input name="phone" required inputmode="tel" pattern="[0-9+()\\-\\s]+" />
+        </label>
+        <label>Senha (obrigatório)
+          <input name="password" type="password" required minlength="6" />
+        </label>
+
+        <div class="form-actions">
+          <a class="btn outline" href="index.html">Voltar</a>
+          <button type="submit" class="btn primary">Criar</button>
+        </div>
+        <p id="createMsg" class="form-note"></p>
+
+        <!-- Texto persistente abaixo do formulário -->
+        <div class="form-hint">
+          <p><strong>Atenção:</strong> O apelido e o número podem ser alterados depois na sua conta. Você também poderá adicionar uma foto de perfil posteriormente. A senha NÃO pode ser alterada.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Sidebar left / visitors -->
+  <aside id="sidebarLeft" class="sidebar left">
+    <button class="close-sidebar" aria-label="Fechar">✕</button>
+    <div class="sidebar-content">
+      <h3>Acesse uma conta para ir à próxima aba do site</h3>
+      <p><strong>Como criar uma conta + Fazer login</strong></p>
+      <div class="video-preview">
+        <a href="#" target="_blank" rel="noopener">Pré-visualizar vídeo (YouTube Shorts)</a>
+      </div>
+      <p><strong>Como fazer pedido + Receber pedido</strong></p>
+      <div class="video-preview">
+        <a href="#" target="_blank" rel="noopener">Pré-visualizar vídeo (YouTube Shorts)</a>
+      </div>
+
+      <h4>🍀 Nazzy Design</h4>
+      <p><a href="#" id="waLink2">Acesse aqui nossa comunidade!</a></p>
+      <p>© Nazzy Equipe</p>
+      <p>Nenhum administrador autoriza o uso das artes sem autorização.</p>
+      <p>Site criado pelo sublíder Rav</p>
+      <p>Qualquer dúvida sobre o uso do site, entre em contato conosco.</p>
+    </div>
+  </aside>
+
+  <script src="scripts.js"></script>
+</body>
+      </html>
