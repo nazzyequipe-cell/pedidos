@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard • NazzyPedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <div class="left-top">
+      <button id="menuBtn" class="icon-btn" aria-label="Abrir menu">≡</button>
+      <div class="brand">Nazzy<span class="brand-accent">Pedidos</span></div>
+    </div>
+    <div class="right-top">
+      <button id="notifyBtn" class="icon-btn" aria-label="Notificações">🔔<span id="notifBadge" class="notif-badge" style="display:none">0</span></button>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <div class="glass welcome-card">
+      <h2 id="greeting">Olá!</h2>
+      <p id="welcomeSub">Bem-vindo ao NazzyPedidos.</p>
+      <div class="hero-actions stacked">
+        <a class="btn primary" id="makeOrderBtn" href="select-admin.html">Fazer Pedido</a>
+      </div>
+
+      <div style="height:20px"></div>
+      <div class="nazzygram-container">
+        <a class="btn nazzygram small-vertical" href="nazzygram.html" id="nazzygramBtn">Nazzygram</a>
+      </div>
+    </div>
+
+    <section class="glass small-card">
+      <h3>Últimos pedidos</h3>
+      <ul id="ordersList" class="orders-list">
+        <!-- pedidos carregados pelo scripts.js -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Left Sidebar (menu for logged users) -->
+  <aside id="sidebarLeft" class="sidebar left">
+    <button class="close-sidebar" aria-label="Fechar">✕</button>
+    <div class="sidebar-content profile-sidebar">
+      <div class="profile-header">
+        <img id="profileAvatar" class="profile-avatar" src="assets/admin-placeholder.jpg" alt="Avatar">
+        <input id="avatarInput" type="file" accept="image/*" style="display:none">
+      </div>
+
+      <div class="profile-field">
+        <label>Apelido</label>
+        <div id="profileNickname" class="editable">—</div>
+      </div>
+      <div class="profile-field">
+        <label>Telefone</label>
+        <div id="profilePhone" class="editable">—</div>
+      </div>
+      <div class="profile-field">
+        <label>Senha</label>
+        <div id="profilePassword" class="readonly">********</div>
+      </div>
+
+      <div style="margin-top:14px">
+        <button id="logoutSidebar" class="btn outline">Sair da Conta</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Sidebar (notifications) -->
+  <aside id="sidebarRight" class="sidebar right">
+    <button class="close-sidebar" aria-label="Fechar">✕</button>
+    <div class="sidebar-content">
+      <h3>Notificações</h3>
+      <ul id="notificationsList" class="notifications-list"></ul>
+      <div style="margin-top:10px">
+        <button id="clearRead" class="btn small outline">Remover lidas</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Modal simples para entregar / ver entrega -->
+  <div id="deliverModal" class="modal" aria-hidden="true">
+    <div class="modal-body glass">
+      <button class="close-modal">✕</button>
+      <h4>Entrega</h4>
+      <div id="deliveryContent"></div>
+      <div style="margin-top:12px">
+        <button id="downloadDelivery" class="btn primary">Baixar (placeholder)</button>
+        <button id="copyDelivery" class="btn outline">Copiar link</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+          </html>
