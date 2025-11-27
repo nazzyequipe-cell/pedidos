@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nazzygram • NazzyPedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="nazzygram-page">
+  <header class="ng-header">
+    <div class="ng-logo">Nazzygram</div>
+  </header>
+
+  <section class="ng-stories">
+    <div class="stories-scroll" id="storiesList" aria-label="Stories">
+      <!-- stories gerados por scripts.js -->
+    </div>
+  </section>
+
+  <main class="ng-feed container" id="ngFeed" aria-live="polite">
+    <!-- feed posts/avaliações gerados por scripts.js -->
+  </main>
+
+  <nav class="ng-bottom-nav">
+    <button class="nav-icon" aria-label="Home"></button>
+    <button class="nav-icon" aria-label="Buscar"></button>
+    <button class="nav-icon" aria-label="Adicionar"></button>
+    <button class="nav-icon" aria-label="Curtidas"></button>
+    <button class="nav-icon" aria-label="Perfil"></button>
+  </nav>
+
+  <!-- Profile modal/page -->
+  <div id="adminProfile" class="ng-profile modal" aria-hidden="true">
+    <div class="ng-profile-body">
+      <button class="close-modal">✕</button>
+      <div class="ng-profile-header">
+        <img id="profileLargeAvatar" src="assets/admin-placeholder.jpg" class="ng-profile-avatar" alt="Avatar">
+        <div class="ng-profile-meta">
+          <h3 id="profileName">Admin</h3>
+          <div id="profileBio" class="muted">Bio do administrador</div>
+          <div class="ng-stats">
+            <div><strong id="profilePosts">0</strong><div class="muted">Avaliações</div></div>
+            <div><strong id="profileFollowers">0</strong><div class="muted">Seguidores</div></div>
+            <div><strong id="profileFollowing">0</strong><div class="muted">Seguindo</div></div>
+          </div>
+          <div class="ng-profile-actions">
+            <button id="followBtn" class="btn primary">Seguir</button>
+            <button id="msgBtn" class="btn outline">Mensagem</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ng-evals" id="profileEvals">
+        <!-- avaliações listadas verticalmente -->
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+  </html>
