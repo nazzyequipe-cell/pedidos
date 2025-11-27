@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login Admin • NazzyPedidos</title>
+  <link rel="stylesheet" href="admin/styles-admin.css">
+</head>
+<body class="admin-white">
+  <main class="admin-container">
+    <div class="admin-card">
+      <h2>Entrar no Painel</h2>
+      <p>Insira a senha do painel administrativo</p>
+      <form id="adminLoginForm">
+        <label>Senha do Painel
+          <input id="panelPass" type="password" required />
+        </label>
+        <div class="admin-actions">
+          <button type="submit" class="btn primary">Entrar</button>
+        </div>
+        <p id="adminLoginMsg" class="muted"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="admin/scripts-admin.js"></script>
+</body>
+</html>
