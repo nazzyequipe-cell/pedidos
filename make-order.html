@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fazer Pedido • NazzyPedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar container">
+    <div class="left-top">
+      <button id="menuBtn" class="icon-btn" aria-label="Abrir menu">≡</button>
+      <div class="brand">Nazzy<span class="brand-accent">Pedidos</span></div>
+    </div>
+    <nav><a class="btn outline" href="select-admin.html">Voltar</a></nav>
+  </header>
+
+  <main class="container">
+    <div class="glass order-card">
+      <div id="selectedAdmin" class="selected-admin">
+        <img id="saAvatar" class="admin-avatar-large" src="assets/admin-placeholder.jpg" alt="Admin">
+        <div class="selected-admin-info">
+          <h3 id="saName">Administrador</h3>
+          <div id="saRole" class="muted"></div>
+        </div>
+      </div>
+
+      <label>Tipo de Pedido (obrigatório)
+        <select id="orderType" required>
+          <option value="">-- selecione --</option>
+          <option value="design">Design</option>
+          <option value="decors">Decors</option>
+          <option value="icon">Icon</option>
+        </select>
+      </label>
+
+      <form id="orderForm">
+        <div id="dynamicFields">
+          <!-- preenchido dinamicamente -->
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="cancelOrder" class="btn outline">Cancelar</button>
+          <button type="submit" class="btn primary">Enviar Pedido</button>
+        </div>
+        <p id="orderMsg" class="form-note"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+        </html>
