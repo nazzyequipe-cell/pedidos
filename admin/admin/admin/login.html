@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerenciar Pedidos • Painel</title>
+  <link rel="stylesheet" href="admin/styles-admin.css">
+</head>
+<body class="admin-white">
+  <main class="admin-container">
+    <h2>Gerenciar Pedidos</h2>
+
+    <div class="filters">
+      <select id="filterSelect">
+        <option value="all">Todos os pedidos</option>
+        <option value="pendentes">Pendentes</option>
+        <option value="em_andamento">Em andamento</option>
+        <option value="entregue">Entregues</option>
+        <option value="recusado">Recusados</option>
+      </select>
+
+      <select id="filterByAdmin">
+        <option value="">Mostrar por administrador</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <table id="ordersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Apelido</th>
+            <th>Tipo</th>
+            <th>Admin</th>
+            <th>Status</th>
+            <th>Data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:18px">
+      <button id="ordersBack" class="btn outline">Voltar</button>
+    </div>
+  </main>
+
+  <script src="admin/scripts-admin.js"></script>
+</body>
+  </html>
